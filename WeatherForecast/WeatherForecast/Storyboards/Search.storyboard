@@ -183,9 +183,17 @@
                     <navigationItem key="navigationItem" title="Search" id="nh7-Ts-Ecb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="cityName" destination="5RM-eT-nyU" id="SdK-u3-ykJ"/>
+                        <outlet property="currentTemperature" destination="xUg-3t-rgb" id="oHD-Jy-5oS"/>
+                        <outlet property="descriptionLabel" destination="Axk-ze-MSi" id="uNW-gV-OJX"/>
+                        <outlet property="humidity" destination="KNl-gp-ukW" id="Hnj-Kx-Iup"/>
                         <outlet property="latitudeLabel" destination="QBK-V4-LBQ" id="BcG-MK-tXq"/>
                         <outlet property="longitudeLabel" destination="wUC-Sh-99R" id="uXX-UF-oDe"/>
+                        <outlet property="maxTemperature" destination="yVw-mY-4qh" id="SNN-4H-Dby"/>
+                        <outlet property="minTemperature" destination="ned-FQ-HWP" id="PUi-E3-d1Z"/>
+                        <outlet property="pressure" destination="PSm-4S-IQD" id="rnx-hP-wHY"/>
                         <outlet property="searchDisplayController" destination="wPW-IX-0ge" id="CJq-hn-wUk"/>
+                        <outlet property="windSpeed" destination="WTL-HG-r42" id="LQK-wv-ikN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQi-Bd-Vzx" userLabel="First Responder" sceneMemberID="firstResponder"/>

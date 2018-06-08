@@ -10,21 +10,18 @@ import Foundation
 
 class WeatherForecastViewModel {
 
-    private var forecastList: ForecastList?
+    private var forecastList: ForecastList!
     
-    class func getForecastList(latitude: Double, longitude: Double, getCoordinates: (Double, Double) -> Double) -> Double {
-        
-        // return getCoordinates(latitude, longitude)
+    func updateLocation(currentCity: String) -> () {
+        print(currentCity)
     }
     
-    var city_name: String {
-        return (self.forecastList?.timezone)!
-    }
-    
-    /*
-        { (params) -> returnType in
-            statements
+    func getForecastList() {
+        WeatherForecastManagerDLG.loadForecastList { (forecastListResult, error) in
+            if let unwrappedForecastList = forecastListResult {
+                print(unwrappedForecastList)
+            }
         }
-    */
+    }
 
 }

@@ -23,6 +23,14 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: @IBOutlet(s)
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
+    @IBOutlet weak var cityName: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var currentTemperature: UILabel!
+    @IBOutlet weak var maxTemperature: UILabel!
+    @IBOutlet weak var minTemperature: UILabel!
+    @IBOutlet weak var humidity: UILabel!
+    @IBOutlet weak var pressure: UILabel!
+    @IBOutlet weak var windSpeed: UILabel!
     
     // MARK: @IBAction(s)
     @IBAction func updateLocation(sender: UIButton) {
@@ -33,6 +41,7 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         let viewModel = WeatherForecastViewModel()
+        viewModel.getForecastList()
     }
     
     override func viewDidAppear(_ animated: Bool) {
