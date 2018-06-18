@@ -33,7 +33,7 @@ class WeatherForecastManagerDLG {
         }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            print("error = \(error)")
+            print("error = \(String(describing: error))")
             guard let data = data else {
                 print("No data returned")
                 completion(nil, error)

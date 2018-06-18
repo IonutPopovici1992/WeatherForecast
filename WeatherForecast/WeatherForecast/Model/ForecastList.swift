@@ -9,11 +9,11 @@
 import Foundation
 import CoreLocation
 
-struct ForecastList: Decodable {
+struct ForecastList: Decodable, Encodable {
     var latitude: Double
     var longitude: Double
     var timezone: String
-    var currently: [Currently]
+    var currently: Currently
     var minutely: [Minutely]
     var hourly: [Hourly]
     var daily: [Daily]
@@ -23,7 +23,7 @@ struct ForecastList: Decodable {
     init(latitude: Double,
          longitude: Double,
          timezone: String,
-         currently: [Currently],
+         currently: Currently,
          minutely: [Minutely],
          hourly: [Hourly],
          daily: [Daily],
@@ -58,7 +58,7 @@ struct ForecastList: Decodable {
         let latitude = try container.decode(Double.self, forKey: .latitude)
         let longitude = try container.decode(Double.self, forKey: .longitude)
         let timezone = try container.decode(String.self, forKey: .timezone)
-        let currently = try container.decode([Currently].self, forKey: .currently)
+        let currently = try container.decode(Currently.self, forKey: .currently)
         let minutely = try container.decode([Minutely].self, forKey: .minutely)
         let hourly = try container.decode([Hourly].self, forKey: .hourly)
         let daily = try container.decode([Daily].self, forKey: .daily)
